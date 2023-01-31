@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: left;
+    align-items: center;
+    background: #0A7AFF;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 25px 30px;
+    border-radius: 5px;
+    
+position: absolute;
+height: 450px;
+left: 32px;
+top: 50px;
+}
+.container .title{
+    font-size: 20px;
+    font-weight: 250;
+    position: relative;
+    text-align: center;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(135deg, #71b7e6, #a9cbff);
+}
+.container form .User-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .User-details .Input-box{
+    margin: 1px ;
+    width: calc(100% / 2 - 5px  );
+}
+.User-details .Input-box.details{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+}.User-details .Input-box input{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+}.button{
+position: absolute;
+left: 200px;
+top: 400px;
+}.hasil{
+    max-width: 500px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 25px 30px;
+    border-radius: 5px;
+    
+    position: absolute;
+    width: 486px;
+    height: 450px;
+    left: 829px;
+    top: 0px;
+}

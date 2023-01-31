@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Prediksi </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  <body>
+    <div class="container">
+        <div class="title">Prediksi Harga <br>
+        Berdasarkan<br>
+    Spesifikasi<br></div>
+        <form action="{{url_for('predict')}}"
+        method="post">
+            <div class="User-details">
+                <div class="Input-box">
+                    <span class="details">Weight</span>
+                    <input type="float"
+                    name="weight" placeholder="" required>
+                </div>
+                <div class="Input-box">
+                    <span class="details">Size Screen</span>
+                    <input type="float"
+                    name="resoloution" placeholder="" required>
+                </div>
+                <div class="Input-box">
+                    <span class="details">ppi</span>
+                    <input type="int"
+                    name="ppi" placeholder="" required>
+                </div>
+                <div class="Input-box">
+                    <span class="details">cpu_core</span>
+                    <input type="float"
+                    name="cpu_core" placeholder="" required>
+                </div>
+                <div class="Input-box">
+                    <span class="details">cpu_freq</span>
+                    <input type="float"
+                    name="cpu_freq" placeholder="" required>
+                </div>
+                <div class="Input-box">
+                    <span class="details">Memori Internal</span>
+                    <input type="float"
+                    name="internal_mem" placeholder="" required>
+                </div>
+                <div class="Input-box">
+                    <span class="details">Ram</span>
+                    <input type="float"
+                    name="Ram" placeholder="" required>
+                </div>
+                <div class="Input-box">
+                    <span class="details">kamera belakang</span>
+                    <input type="float"
+                    name="RearCam" placeholder="" required>
+                </div>
+                <div class="Input-box">
+                    <span class="details">Kamera depan</span>
+                    <input type="float"
+                    name="Front_Cam" placeholder="" required>
+                </div>
+                <div class="Input-box">
+                    <span class="details">Batre</span>
+                    <input type="int"
+                    name="battery" placeholder="" required>
+                </div>
+            </div>
+            <button
+type="submit"
+class="
+flex
+justify-center
+align-center
+mt-8
+p-4
+bg-gradient-to-r
+from-green-400
+to-blue-500
+text-white
+rounded-md">
+
+Proses Prediksi
+<svg
+xlmns="http://www.w3.org/2000/svg"
+widht="24"
+height="24"
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-widht="2"
+stroke-linecap="round"
+stroke-linejoin="round"
+class="feather feather-arrow-right ml-4">
+<line x1="5" y1="12" x2="10" y2="12"></line>
+<polyline points ="12 5 10 12 12 19"></polyline>
+</svg>
+</button>
+        </form>
+        <section class="hasil">
+            <div class="bg-white p-16 rounded-lg">
+                <h1 class="text-2x1 mb-8">
+                    Prediksi Nya Sebagai Berikut
+                </h1>
+                <h2 class="text-5xl font-bold">Price Rp.{{ Price }}</h2>
+                {% if (insurance_cost) != 0 %}
+                <div class="mt-8">
+                    <p>weight {{ weight }}</p>
+                    <p>resoloution {{ resoloution }}</p>
+                    <p>ppi {{ ppi }}</p>
+                    <p>cpu_core {{ cpu_core }}</p>
+                    <p>cpu_freq {{ cpu_freq }}</p>
+                    <p>internal_mem {{ internal_mem }}</p>
+                    <p>ram {{ ram }}</p>
+                    <p>RearCam {{ RearCam }}</p>
+                    <p>Front_Cam {{ Front_Cam }}</p>
+                    <p>battery {{ battery }}</p>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+    </div>
+  </body>
+</html>
