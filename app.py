@@ -5,7 +5,7 @@ import numpy
 
 app = Flask(__name__)
 
-model_file = open('modelproyekrupiah .pkl', 'rb')
+model_file = open('modelproyekrupiah.pkl', 'rb')
 model = pickle.load(model_file, encoding='bytes')
 
 
